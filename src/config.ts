@@ -144,16 +144,16 @@ export const config = {
     },
     skills: {
         develop: {
-            title: "IA & ANÁLISIS DE DATOS",
-            description: "Agentes inteligentes, Machine Learning & Automatización",
-            details: "Desarrollo e implementación de agentes inteligentes de IA, modelos de Machine Learning (Random Forest, etc.), Prompt Engineering y analítica de datos para optimizar procesos operativos y escalar operaciones.",
-            tools: ["Agentes de IA", "Machine Learning", "Prompt Engineering", "Análisis de Datos", "Python", "FastAPI", "Selenium", "Robótica & HW", "Impresión 3D"]
+            title: "DATA, BI & INTELIGENCIA ARTIFICIAL",
+            description: "Agentes de IA, Dashboards Analíticos & Business Intelligence",
+            details: "Desarrollo e integración de agentes de IA, bots conversacionales integrados a la API oficial de WhatsApp Cloud, modelos de Machine Learning (Random Forest) y tableros analíticos interactivos en Power BI, Looker Studio y Databricks.",
+            tools: ["Agentes de IA", "Power BI", "Looker Studio", "Databricks", "Machine Learning", "Prompt Engineering", "Python", "FastAPI", "Selenium", "WhatsApp Cloud API"]
         },
         design: {
             title: "FULL STACK & TECH LEAD",
-            description: "Desarrollo Web Moderno & Arquitecturas Escalables",
-            details: "Diseño y desarrollo de soluciones de software integrales con React, Vue.js, Node.js y FastAPI. Liderazgo técnico, arquitecturas escalables, bases de datos (MySQL, Azure) y automatización de pruebas.",
-            tools: ["React", "Vue.js", "Node.js", "FastAPI", "Java", "TypeScript", "Microsoft Azure", "MySQL", "Tailwind CSS", "Git"]
+            description: "Arquitecturas Escalables, QA Cloud & Liderazgo Técnico",
+            details: "Liderazgo técnico y desarrollo de software full stack con React, Vue.js, Next.js, Node.js, Python y Java. Arquitectura de bases de datos relacionales (MySQL, Azure), pruebas de QA con Selenium y metodologías ágiles.",
+            tools: ["React", "Vue.js", "Next.js", "Node.js", "FastAPI", "Python", "Java", "TypeScript", "Microsoft Azure", "MySQL", "Selenium", "Tailwind CSS", "Git"]
         }
     }
 };

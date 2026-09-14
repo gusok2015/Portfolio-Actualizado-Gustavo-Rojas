@@ -38,40 +38,41 @@
 
 .what-box-in {
   flex-direction: column;
-  height: 500px;
+  height: 600px;
   margin-left: 200px;
   position: relative;
   display: flex;
 }
 
 .what-content {
-  width: 450px;
-  height: 33%;
-  min-height: 50%;
+  width: 480px;
+  height: 30%;
+  min-height: 45%;
   transition: 0.5s;
   /* border: 0.5px dashed rgba(255, 255, 255, 0.3); */
   position: relative;
-  padding: 50px;
+  padding: 40px;
   box-sizing: border-box;
 }
 
 .what-noTouch:hover,
 .what-content-active {
-  min-height: 67%;
-  padding: 40px 50px;
+  min-height: 75%;
+  padding: 30px 40px;
 }
 
 .what-noTouch:hover~.what-content,
 .what-box-in:hover .what-noTouch:not(:hover),
 .what-content.what-sibling {
-  min-height: 33%;
-  padding: 10px 50px;
+  min-height: 25%;
+  padding: 15px 40px;
 }
 
 .what-content h3 {
-  font-size: 35px;
-  letter-spacing: 1px;
-  margin: 0;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  margin: 0 0 6px 0;
 }
 
 .what-content p {
@@ -223,7 +224,7 @@
 }
 
 .what-border2 svg {
-  height: 500px;
+  height: 600px;
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
@@ -235,12 +236,14 @@
 }
 
 .what-content-in h5 {
-  font-weight: 300;
-  opacity: 0.5;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-weight: 400;
+  opacity: 0.6;
+  font-size: 11px;
+  letter-spacing: 1.5px;
   font-family: "Geist", sans-serif;
-  margin-bottom: 5px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 @keyframes whatBorders {
@@ -257,17 +260,18 @@
 
 .what-content-flex {
   display: flex;
-  gap: 5px;
+  gap: 6px 8px;
   flex-wrap: wrap;
 }
 
 .what-tags {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  padding: 2px 7px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid #ffffff50;
-  border-radius: 30px;
+  padding: 3px 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  color: #e5e5e5;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -282,16 +286,17 @@
   }
 
   .what-box-in {
-    height: 400px;
+    height: 560px;
+    margin-left: 50px;
   }
 
   .what-content h3 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .what-content {
-    padding: 30px;
-    width: 400px;
+    padding: 25px 30px;
+    width: 420px;
   }
 
   .what-content p {
@@ -310,17 +315,8 @@
   }
 
   .what-tags {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .what-box-in {
-    margin-left: 50px;
-  }
-
-  .what-content {
-    width: 380px;
+    font-size: 11px;
+    padding: 2px 8px;
   }
 }
 
@@ -332,30 +328,30 @@
   }
 
   .what-box-in {
-    height: 500px;
+    height: 560px;
     margin-left: -50px;
   }
 
   .what-content {
-    padding: 50px;
+    padding: 30px 40px;
     width: 500px;
   }
 
   .what-content p {
-    font-size: 14px;
+    font-size: 13.5px;
   }
 
   .what-noTouch:hover,
   .what-content-active {
-    min-height: 67%;
-    padding: 50px;
+    min-height: 75%;
+    padding: 30px 40px;
   }
 
   .what-noTouch:hover~.what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    min-height: 33%;
-    padding: 10px 50px;
+    min-height: 25%;
+    padding: 10px 40px;
   }
 }
 
@@ -375,7 +371,7 @@
   }
 
   .what-box:last-child {
-    height: 500px;
+    height: 580px;
   }
 
   .what-box {
@@ -390,7 +386,7 @@
 
   .what-box-in {
     margin-left: 0px;
-    height: 450px;
+    height: 550px;
   }
 
   .what-content h5,
@@ -407,16 +403,16 @@
   }
 
   .what-content {
-    padding: 30px;
+    padding: 25px;
   }
 
   .what-content p {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .what-noTouch:hover,
   .what-content-active {
-    padding: 10px 30px;
+    padding: 15px 25px;
   }
 
   .what-tags {
@@ -426,11 +422,11 @@
   .what-noTouch:hover~.what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    padding: 5px 30px;
+    padding: 5px 25px;
   }
 
   .what-content h3 {
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 
