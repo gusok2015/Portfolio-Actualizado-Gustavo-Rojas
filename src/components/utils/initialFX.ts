@@ -7,13 +7,48 @@ export function initialFX() {
   if (lenis) {
     lenis.start();
   }
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  const mainElem = document.getElementsByTagName("main")[0];
+  if (mainElem) {
+    mainElem.classList.add("main-active");
+  }
+
   gsap.to("body", {
     backgroundColor: "#0b080c",
     duration: 0.5,
     delay: 1,
   });
 
+  gsap.fromTo(
+    [".header", ".icons-section", ".nav-fade"],
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1.2,
+      ease: "power1.inOut",
+      delay: 0.1,
+    }
+  );
+
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    // Clean fade-in for mobile without breaking <br> linebreaks or running LoopText on missing elements
+    gsap.fromTo(
+      [".landing-intro", ".mobile-photo", ".landing-info"],
+      { opacity: 0, y: 25 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.15,
+        delay: 0.2,
+      }
+    );
+    return;
+  }
+
+  // Desktop FX
   const selectors = [".landing-info h3", ".landing-intro h2", ".landing-intro h1"];
   const elements = selectors.flatMap(selector => Array.from(document.querySelectorAll(selector)));
   var landingText = new TextSplitter(elements, {
@@ -62,23 +97,17 @@ export function initialFX() {
       delay: 0.8,
     }
   );
-  gsap.fromTo(
-    [".header", ".icons-section", ".nav-fade"],
-    { opacity: 0 },
-    {
-      opacity: 1,
-      duration: 1.2,
-      ease: "power1.inOut",
-      delay: 0.1,
-    }
-  );
 
   var landingText3 = new TextSplitter(".landing-h2-info-1", TextProps);
   var landingText4 = new TextSplitter(".landing-h2-1", TextProps);
   var landingText5 = new TextSplitter(".landing-h2-2", TextProps);
 
-  LoopText(landingText2, landingText3);
-  LoopText(landingText4, landingText5);
+  if (landingText2.chars.length > 0 && landingText3.chars.length > 0) {
+    LoopText(landingText2, landingText3);
+  }
+  if (landingText4.chars.length > 0 && landingText5.chars.length > 0) {
+    LoopText(landingText4, landingText5);
+  }
 }
 
 function LoopText(Text1: TextSplitter, Text2: TextSplitter) {

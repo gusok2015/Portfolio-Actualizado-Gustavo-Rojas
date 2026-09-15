@@ -22,7 +22,7 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 50px 15px 15px 15px !important;
+    padding: 60px 15px 20px 15px !important;
     margin: 0 auto !important;
     overflow: hidden !important;
   }
@@ -52,22 +52,29 @@
   .landing-intro h2 {
     text-align: center !important;
     width: 100% !important;
-    margin: 0 0 2px 0 !important;
-    font-size: 15px !important;
+    margin: 0 0 6px 0 !important;
+    font-size: 16px !important;
     color: var(--accentColor) !important;
-    font-weight: 300 !important;
-    letter-spacing: 1px !important;
-    opacity: 0.9 !important;
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+    opacity: 0.95 !important;
   }
 
   .landing-intro h1 {
-    font-size: 26px !important;
+    font-size: 29px !important;
     line-height: 1.15 !important;
     margin: 0 !important;
     text-align: center !important;
     width: 100% !important;
-    letter-spacing: 1.5px !important;
-    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+  }
+
+  .landing-intro h1 span {
+    color: #ffffff !important;
+    font-weight: 600 !important;
   }
 
   /* Ensure name parts display correctly */
@@ -89,12 +96,12 @@
     margin: 0 !important;
     z-index: 10;
     background: transparent;
-    padding: 0 0 10px 0 !important;
+    padding: 0 0 15px 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 3px !important;
+    gap: 4px !important;
     height: auto !important;
     width: 100% !important;
     order: 3;
@@ -129,11 +136,11 @@
 
   /* Distinct styling for BREAKPOINT and CREATIVA */
   .landing-h2-1 {
-    font-size: 21px !important;
+    font-size: 22px !important;
     line-height: 1.15 !important;
     color: #c481ff !important;
     font-weight: 700 !important;
-    letter-spacing: 2.5px !important;
+    letter-spacing: 3px !important;
     text-align: center !important;
     width: 100% !important;
     text-transform: uppercase !important;
@@ -145,7 +152,7 @@
     line-height: 1.15 !important;
     color: rgba(255, 255, 255, 0.95) !important;
     font-weight: 500 !important;
-    letter-spacing: 3.5px !important;
+    letter-spacing: 4px !important;
     text-align: center !important;
     width: 100% !important;
     text-transform: uppercase !important;
@@ -187,17 +194,17 @@
     display: flex !important;
     position: relative !important;
     width: 100% !important;
-    max-width: 260px !important;
-    max-height: 44vh !important;
-    margin: 0 auto !important;
+    max-width: 270px !important;
+    max-height: 45vh !important;
+    margin: 5px auto !important;
     z-index: 1;
     order: 2;
     text-align: center !important;
     flex: 1 1 auto !important;
     align-items: center !important;
     justify-content: center !important;
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     pointer-events: none;
     transform: none !important;
   }
@@ -210,7 +217,7 @@
     object-fit: contain;
     margin: 0 auto !important;
     display: block !important;
-    filter: drop-shadow(0 0 30px rgba(194, 164, 255, 0.4));
+    filter: drop-shadow(0 0 35px rgba(194, 164, 255, 0.45));
   }
 }
 
