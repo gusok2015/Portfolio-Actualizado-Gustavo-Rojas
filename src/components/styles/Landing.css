@@ -11,23 +11,23 @@
 
   .landing-section,
   .landing-container {
-    height: auto !important;
-    min-height: 100vh;
+    height: 100vh !important;
+    height: 100svh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
     max-width: 100vw;
     width: 100% !important;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 0 15px;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    justify-content: space-between !important;
+    padding: 50px 15px 15px 15px !important;
     margin: 0 auto !important;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
   }
 
-  /* Fix spacing between name and subtitle */
+  /* Intro (Greeting & Name) */
   .landing-intro {
     position: relative !important;
     top: auto !important;
@@ -35,8 +35,8 @@
     right: auto !important;
     bottom: auto !important;
     transform: none !important;
-    padding-top: 15px;
-    margin-bottom: 15px;
+    padding: 0 !important;
+    margin: 0 !important;
     z-index: 10;
     text-align: center !important;
     width: 100% !important;
@@ -46,13 +46,14 @@
     justify-content: center !important;
     order: 1;
     height: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .landing-intro h2 {
     text-align: center !important;
     width: 100% !important;
-    margin: 0 0 6px 0 !important;
-    font-size: 18px !important;
+    margin: 0 0 2px 0 !important;
+    font-size: 15px !important;
     color: var(--accentColor) !important;
     font-weight: 300 !important;
     letter-spacing: 1px !important;
@@ -60,12 +61,12 @@
   }
 
   .landing-intro h1 {
-    font-size: 32px !important;
-    line-height: 1.18 !important;
+    font-size: 26px !important;
+    line-height: 1.15 !important;
     margin: 0 !important;
     text-align: center !important;
     width: 100% !important;
-    letter-spacing: 2px !important;
+    letter-spacing: 1.5px !important;
     font-weight: 500 !important;
   }
 
@@ -73,7 +74,7 @@
   .landing-intro h1 br {
     display: block !important;
     content: " ";
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   /* Subtitles Container (BREAKPOINT CREATIVA) */
@@ -85,21 +86,22 @@
     bottom: auto !important;
     transform: none !important;
     text-align: center !important;
-    margin-top: 15px !important;
+    margin: 0 !important;
     z-index: 10;
     background: transparent;
-    padding-bottom: 30px !important;
+    padding: 0 0 10px 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 6px !important;
+    gap: 3px !important;
     height: auto !important;
     width: 100% !important;
     order: 3;
     box-sizing: border-box !important;
     opacity: 1 !important;
     visibility: visible !important;
+    flex-shrink: 0 !important;
   }
 
   .landing-info h3 {
@@ -127,11 +129,11 @@
 
   /* Distinct styling for BREAKPOINT and CREATIVA */
   .landing-h2-1 {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
+    font-size: 21px !important;
+    line-height: 1.15 !important;
     color: #c481ff !important;
     font-weight: 700 !important;
-    letter-spacing: 3px !important;
+    letter-spacing: 2.5px !important;
     text-align: center !important;
     width: 100% !important;
     text-transform: uppercase !important;
@@ -139,11 +141,11 @@
   }
 
   .landing-h2-info {
-    font-size: 18px !important;
-    line-height: 1.2 !important;
+    font-size: 15px !important;
+    line-height: 1.15 !important;
     color: rgba(255, 255, 255, 0.95) !important;
     font-weight: 500 !important;
-    letter-spacing: 4px !important;
+    letter-spacing: 3.5px !important;
     text-align: center !important;
     width: 100% !important;
     text-transform: uppercase !important;
@@ -182,27 +184,33 @@
 
   /* Show mobile photo */
   .mobile-photo {
-    display: block !important;
+    display: flex !important;
     position: relative !important;
     width: 100% !important;
-    max-width: 340px !important;
+    max-width: 260px !important;
+    max-height: 44vh !important;
     margin: 0 auto !important;
     z-index: 1;
     order: 2;
     text-align: center !important;
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    flex: 1 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     pointer-events: none;
     transform: none !important;
   }
 
   .mobile-photo img {
-    width: 100% !important;
+    width: auto !important;
+    max-width: 100% !important;
     height: auto !important;
+    max-height: 100% !important;
     object-fit: contain;
     margin: 0 auto !important;
     display: block !important;
-    filter: drop-shadow(0 0 40px rgba(194, 164, 255, 0.4));
+    filter: drop-shadow(0 0 30px rgba(194, 164, 255, 0.4));
   }
 }
 
