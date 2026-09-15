@@ -22,7 +22,7 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 60px 15px 20px 15px !important;
+    padding: 48px 15px 12px 15px !important;
     margin: 0 auto !important;
     overflow: hidden !important;
   }
@@ -52,8 +52,8 @@
   .landing-intro h2 {
     text-align: center !important;
     width: 100% !important;
-    margin: 0 0 6px 0 !important;
-    font-size: 16px !important;
+    margin: 0 0 2px 0 !important;
+    font-size: 15px !important;
     color: var(--accentColor) !important;
     font-weight: 400 !important;
     letter-spacing: 1.5px !important;
@@ -61,7 +61,7 @@
   }
 
   .landing-intro h1 {
-    font-size: 29px !important;
+    font-size: 27px !important;
     line-height: 1.15 !important;
     margin: 0 !important;
     text-align: center !important;
@@ -84,6 +84,37 @@
     margin-bottom: 2px;
   }
 
+  /* Show mobile photo - shifted up slightly and compact max-height so BREAKPOINT CREATIVA is visible on load */
+  .mobile-photo {
+    display: flex !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 230px !important;
+    max-height: 35vh !important;
+    margin: -8px auto 4px auto !important;
+    z-index: 1;
+    order: 2;
+    text-align: center !important;
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    pointer-events: none;
+    transform: none !important;
+  }
+
+  .mobile-photo img {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 100% !important;
+    object-fit: contain;
+    margin: 0 auto !important;
+    display: block !important;
+    filter: drop-shadow(0 0 30px rgba(194, 164, 255, 0.45));
+  }
+
   /* Subtitles Container (BREAKPOINT CREATIVA) */
   .landing-info {
     position: relative !important;
@@ -96,12 +127,12 @@
     margin: 0 !important;
     z-index: 10;
     background: transparent;
-    padding: 0 0 15px 0 !important;
+    padding: 0 0 8px 0 !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 4px !important;
+    gap: 2px !important;
     height: auto !important;
     width: 100% !important;
     order: 3;
@@ -116,9 +147,10 @@
     display: none !important;
   }
 
-  /* Force static positioning & full visibility on mobile */
+  /* Force static positioning, reset desktop margins/transforms & ensure full visibility on mobile */
   .landing-info h2,
   h2.landing-info-h2,
+  .landing-info h2.landing-info-h2,
   .landing-h2-1,
   .landing-h2-info {
     position: static !important;
@@ -136,8 +168,8 @@
 
   /* Distinct styling for BREAKPOINT and CREATIVA */
   .landing-h2-1 {
-    font-size: 22px !important;
-    line-height: 1.15 !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
     color: #c481ff !important;
     font-weight: 700 !important;
     letter-spacing: 3px !important;
@@ -148,9 +180,9 @@
   }
 
   .landing-h2-info {
-    font-size: 15px !important;
-    line-height: 1.15 !important;
-    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    color: rgba(255, 255, 255, 0.92) !important;
     font-weight: 500 !important;
     letter-spacing: 4px !important;
     text-align: center !important;
@@ -187,37 +219,6 @@
 
   .landing-info-h2::after {
     display: none !important;
-  }
-
-  /* Show mobile photo */
-  .mobile-photo {
-    display: flex !important;
-    position: relative !important;
-    width: 100% !important;
-    max-width: 270px !important;
-    max-height: 45vh !important;
-    margin: 5px auto !important;
-    z-index: 1;
-    order: 2;
-    text-align: center !important;
-    flex: 1 1 auto !important;
-    align-items: center !important;
-    justify-content: center !important;
-    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    pointer-events: none;
-    transform: none !important;
-  }
-
-  .mobile-photo img {
-    width: auto !important;
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 100% !important;
-    object-fit: contain;
-    margin: 0 auto !important;
-    display: block !important;
-    filter: drop-shadow(0 0 35px rgba(194, 164, 255, 0.45));
   }
 }
 
