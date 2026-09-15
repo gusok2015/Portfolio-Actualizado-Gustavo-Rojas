@@ -36,7 +36,7 @@
     bottom: auto !important;
     transform: none !important;
     padding-top: 15px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     z-index: 10;
     text-align: center !important;
     width: 100% !important;
@@ -55,14 +55,13 @@
     font-size: 18px !important;
     color: var(--accentColor) !important;
     font-weight: 300 !important;
-    letter-spacing: 1.5px !important;
-    opacity: 0.85 !important;
+    letter-spacing: 1px !important;
+    opacity: 0.9 !important;
   }
 
   .landing-intro h1 {
-    word-spacing: 0.1em;
     font-size: 32px !important;
-    line-height: 1.15 !important;
+    line-height: 1.18 !important;
     margin: 0 !important;
     text-align: center !important;
     width: 100% !important;
@@ -72,12 +71,12 @@
 
   /* Ensure name parts display correctly */
   .landing-intro h1 br {
-    display: block;
+    display: block !important;
     content: " ";
     margin-bottom: 4px;
   }
 
-  /* Subtitles Container */
+  /* Subtitles Container (BREAKPOINT CREATIVA) */
   .landing-info {
     position: relative !important;
     top: auto !important;
@@ -99,43 +98,44 @@
     width: 100% !important;
     order: 3;
     box-sizing: border-box !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .landing-info h3 {
     text-align: center !important;
-    display: none;
+    display: none !important;
   }
 
-  /* Force static positioning to prevent overlaps and guarantee centering */
+  /* Force static positioning & full visibility on mobile */
   .landing-info h2,
   h2.landing-info-h2,
   .landing-h2-1,
   .landing-h2-info {
     position: static !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: block !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    white-space: normal !important;
     text-align: center !important;
     height: auto !important;
     transform: none !important;
     left: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
-  /* Specific styling for the distinct parts */
+  /* Distinct styling for BREAKPOINT and CREATIVA */
   .landing-h2-1 {
     font-size: 24px !important;
     line-height: 1.2 !important;
     color: #c481ff !important;
     font-weight: 700 !important;
     letter-spacing: 3px !important;
-    justify-content: center !important;
     text-align: center !important;
     width: 100% !important;
     text-transform: uppercase !important;
+    display: block !important;
   }
 
   .landing-h2-info {
@@ -144,19 +144,19 @@
     color: rgba(255, 255, 255, 0.95) !important;
     font-weight: 500 !important;
     letter-spacing: 4px !important;
-    justify-content: center !important;
     text-align: center !important;
     width: 100% !important;
     text-transform: uppercase !important;
+    display: block !important;
   }
 
+  /* TextSplitter wrapper spans line & char styles */
   .split-h2,
-  .split-line,
-  .landing-info .split-char,
-  .landing-intro .split-char {
+  .split-line {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    flex-wrap: wrap !important;
     width: 100% !important;
     text-align: center !important;
     margin: 0 auto !important;
@@ -164,14 +164,20 @@
     transform: none !important;
   }
 
-  .landing-info .split-char,
-  .landing-intro .split-char {
+  /* CRITICAL FIX: chars MUST be inline-block with auto width so letters don't spread out */
+  .split-char {
     display: inline-block !important;
     width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
   }
 
   .landing-info-h2::after {
-    display: none;
+    display: none !important;
   }
 
   /* Show mobile photo */
