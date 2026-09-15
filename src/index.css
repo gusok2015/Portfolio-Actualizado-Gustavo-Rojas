@@ -123,6 +123,8 @@ body {
 .split-h2 {
   overflow: hidden;
   display: flex;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
   flex-wrap: nowrap;
 }
